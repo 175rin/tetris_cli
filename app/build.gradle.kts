@@ -41,6 +41,11 @@ java {
 application {
     // Define the main class for the application.
     mainClass = "org.example.AppKt"
+    applicationDefaultJvmArgs = listOf(
+        "-Dfile.encoding=UTF-8",
+        "-Dstdout.encoding=UTF-8",
+        "-Dstderr.encoding=UTF-8",
+    )
 }
 
 tasks.named<Test>("test") {
